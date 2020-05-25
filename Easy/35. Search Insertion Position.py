@@ -23,9 +23,11 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
+
+        # consider two scenarios: 1 the target is bigger then the element in nums, the position will the last index
         if target > nums[len(nums) - 1]:
             return len(nums)
-
+        # 2 the target is less than one of the element in nums, comparing these two and return the index of the element in num
         for i in range(len(nums)):
             if nums[i] >= target:
                 return i
