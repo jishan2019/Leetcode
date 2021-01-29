@@ -17,11 +17,11 @@ class Solution:
         if not nums:
             return 0
 
-        # start the count == 1;
-        count = 1
-        for i in range(len(nums-1)):
-            if nums[count] != nums[i+1]:
+        # start the count == 0;
+        count = 0
+        for i in range(len(nums)):
+            if nums[count] != nums[i]:
                 count += 1
-                nums[count] = nums[i+1]
+                nums[count] = nums[i]
         return count + 1
 

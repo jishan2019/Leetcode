@@ -24,3 +24,22 @@ class Solution:
             if num > heap[0]:
                 hq.heapreplace(heap, num)
         return heap[0]
+
+
+class Solution:
+    def findKthLargest(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        return heapq.nlargest(k, nums)[-1]
+
+
+#2 Quickselect
+
+'''
+kth largest element is equal to the (N-k)th smallest element.
+
+
+'''
